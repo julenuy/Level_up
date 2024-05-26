@@ -44,6 +44,12 @@ class Quest:
     def __str__(self):
         return (f"Quest: {self.name}, Description: {self.description}, Questline: {self.questline}, Mode: {self.mode}")
 
+    def can_be_done_solo(self):
+        return self.mode in ["Solo", "Mixed"]
+
+    def can_be_done_coop(self):
+        return self.mode in ["Coop", "Mixed"]
+
 class Questline:
     def __init__(self, name, description, quests):
         self.name = name
@@ -81,6 +87,28 @@ class Game:
 
     def fast_travel(self, destination):
         print(f"Fast traveling to {destination}")
+
+    def get_quests_for_mode(self, mode):
+        if mode == "Solo":
+            return [quest for quest in self.quests if quest.can_be_done_solo()]
+        elif mode == "Coop":
+            return [quest for quest in self.quests if quest.can_be_done_coop()]
+        else:
+            return []
+
+    def choose_companion(self):
+        if not self.companions:
+            print("No companions available.")
+            return None
+        print("Choose a companion:")
+        for i, companion in enumerate(self.companions):
+            print(f"{i + 1}. {companion.name}")
+        choice = int(input("Enter the number of your choice: ")) - 1
+        if 0 <= choice < len(self.companions):
+            return self.companions[choice]
+        else:
+            print("Invalid choice.")
+            return None
 
 # Define Items
 necklace_of_the_seabond = Item(
@@ -150,7 +178,7 @@ adventure_mode = Quest(
     name="Adventure Mode",
     description="Embark on new journeys with companions to create lasting memories.",
     questline="Adventures",
-    mode="Mixed"
+    mode="Coop"
 )
 
 # Define Questlines
@@ -209,11 +237,14 @@ game.add_questline(personal_friendships)
 game.add_questline(adventures)
 
 # Example of using the new features
-game.add_companion(Companion("Alice", 10, 12, 14, 13, 11, 10, 15, 14))
-game.add_user(User("Bob", 11, 13, 15, 14, 12, 11, 16, 15))
+game.add_companion(Companion("Norbert", 10, 12, 14, 13, 11, 10, 15, 14))
+game.add_user(User(";)", 11, 13, 15, 14, 12, 11, 16, 15))
 
 print(game.companions[0])
 print(game.users[0])
 
 game.travel_map("New Zealand")
 game.fast_travel("Ruhr Area")
+
+# Get quests for solo mode
+solo_quests
