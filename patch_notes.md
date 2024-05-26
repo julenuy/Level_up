@@ -2,9 +2,9 @@ Patch Notes v.30.0.0 - Epic 30s Quest update
 
 Release date: 21.05.2024
 
-New quests and features: 
-	
-#**Features:** Add_companion and add_user were implemented to add new people to your party. Travel_map and fast_travel were added to find new quests and people and travel faster to destinations
+New quests and features: 	
+#Features:
+##Add_companion and add_user were implemented to add new people to your party. Travel_map and fast_travel were added to find new quests and people and travel faster to destinations
 ##Questline:
 ###Strength, Condition, Willpower and Composure: 
 ####			Physical attributes: 	
@@ -12,7 +12,7 @@ New quests and features:
                             	The Questline is connected to Hobbies and Adventures and Personal Companions and Partnerships encouraging 
                             	collaborative activities and shared experiences.
                              
-     	 		Mental attributes:   
+####   	 		Mental attributes:   
 				Nuture and unlock abilities and techniques to enhance your Willpower, Courage and Composure. Mental attributes are 
                             	interwinded with Physical attributes and will interchangeably influence each other.
                             	Quests in this questline are balanced to be either benefitial in solo mode, others in cooperation mode. Embracing the solomode can be benefitial from time to time. 
