@@ -69,16 +69,17 @@ Quests are categorized into different questlines such as physical attributes, me
 
 Physical attributes: Achieve peak physical condition linked to mental attributes.
 Mental attributes: Enhance Willpower, Courage, and Composure.
-*Personal Growth Expedition:*
 
+*Personal Growth Expedition:*
 Continuous Learning: Stay curious and gain new skills.
 Work-Life Balance: Achieve harmony between leisure and professional activities.
 Goals and Dreams: Set and pursue life goals.
-*Personal Friendships and Relationships Campaign:*
 
+*Personal Friendships and Relationships Campaign:*
 Friendships and Family: Strengthen bonds with allies and relatives.
 Partnerships: Develop and nurture partnerships.
-Adventures:
+
+## Adventures:
 
 *Adventure Mode:* Unlock and embark on new journeys with companions.
 ## Items
