@@ -30,6 +30,7 @@ Epic 30s Quest Game is an immersive RPG that helps players navigate their 30s th
 To install the game, follow these steps:
 
 1. Clone the repository:
+´´sh
    git clone https://github.com/julenuy/Level_up.git
 Navigate to the project directory:
   cd Level_up
