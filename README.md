@@ -61,7 +61,7 @@ Quests are categorized into different questlines such as physical attributes, me
 
 ## New in Patch v.30.0.0
 
-#Features
+## Features
 *Add_companion and add_user:* Implemented to add new people to your party.
 *Travel_map and fast_travel:* Added to find new quests and people, and travel faster to destinations.
 #Questline Updates
@@ -81,7 +81,7 @@ Partnerships: Develop and nurture partnerships.
 Adventures:
 
 *Adventure Mode:* Unlock and embark on new journeys with companions.
-Items
+## Items
 
 *New Items and Powers*
 Necklace of the Seabond: Provides physical protection and strengthens the heart and mind.
@@ -91,10 +91,10 @@ The Echoing Grip: Amplifies the user's voice for commanding presence and leaders
 
 Engage in a variety of quests designed to improve physical and mental attributes, foster personal growth, and build strong relationships.
 
-Example Quests
+# Example Quests
 Relax, Trust and Let Yourself Go: Unlocks after completing the "Soulmate Search" questline.
 Continuous Learning: Encourages staying curious and gaining new skills.
-Bug Fixes
+## Bug Fixes
 
 Improved companion detection and interaction.
 Removed missing interest to New Zealand, Ruhr Area, and Donkeys.
