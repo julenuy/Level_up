@@ -46,19 +46,19 @@ New items and powers:
     		A precious necklace with a radiant blue aquamarine pendant. This powerful necklace was gifted by a person who deeply cherishes the wearer. 
       		The aquamarine, known as the stone of protection and clarity grants the wearer, physical protection but also strengthens the heart and mind, when the sea becomes turbulent. 
 		The necklace is finely crafted and glows in the moonlight, an eternal symbol of connection and protection that safeguards not just the wearer and its emotions but the sea as well. 
-    		Charisma+2
-    		Willpower+2
-    		Intuition+1
-    		Special ability: 
-    		Calm waters: Once per day, the wearer can invoke the calming power of the aquamarine to negate fear effects and stress conditions, restoring 1D6 willpower points. 
+    		-Charisma+2
+    		-Willpower+2
+    		-Intuition+1
+    		-Special ability: 
+    		-Calm waters: Once per day, the wearer can invoke the calming power of the aquamarine to negate fear effects and stress conditions, restoring 1D6 willpower points. 
   	The glasses of the emerald gaze: 
-    		A magical pair of sunglasses protecting the wearer from harsh sunlight but also increase its coolness. 
-    		Enhanced vision in bright sunlight +1 Perception in natural environments. 
-    		Charisma Bonus: +1 Charisma on each New Year party. 
+    		-A magical pair of sunglasses protecting the wearer from harsh sunlight but also increase its coolness. 
+    		-Enhanced vision in bright sunlight +1 Perception in natural environments. 
+    		-Charisma Bonus: +1 Charisma on each New Year party. 
   	The echoing grip: 
-    		A seemingly ordinary grip enchanted with ancient magic to amplify the users voice (negating silence effects) making it ideal for public speeches, commanding troups, or captivating an audience. 
+    		-A seemingly ordinary grip enchanted with ancient magic to amplify the users voice (negating silence effects) making it ideal for public speeches, commanding troups, or captivating an audience. 
     		This special item grants a +1 bonus on charisma, and provides a leadship bonus +1, as well as adds +1 to persuation. 
-    		Special ability: Echo of authority: Once a day the user can activate the Echoing grip to deliver a command or speech with such authority that it grants a temporary morale boost to allies witin hearing range. 
+    		-Special ability: Echo of authority: Once a day the user can activate the Echoing grip to deliver a command or speech with such authority that it grants a temporary morale boost to allies witin hearing range. 
     
 
 Bug fixes: 
