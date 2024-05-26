@@ -35,19 +35,20 @@ To install the game, follow these steps:
 Navigate to the project directory:
 
  ```sh
-Copy code
 cd epic-30s-quest-game
-Install the necessary dependencies:
+
+ ```
+2.Install the necessary dependencies:
 
  ```sh
-Copy code
 pip install -r requirements.txt
-Run the game:
+```
+3.Run the patch:
 
  ```sh
-Copy code
-python game.py
-Usage
+python epic_30s.py
+```
+4.Usage
 
 Adding Companions and Users
 You can add companions and users to your party using the add_companion and add_user commands. These features help you build a supportive network as you navigate through various quests.
