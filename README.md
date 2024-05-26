@@ -34,17 +34,17 @@ To install the game, follow these steps:
    git clone https://github.com/yourusername/epic-30s-quest-game.git
 Navigate to the project directory:
 
-sh
+ ```sh
 Copy code
 cd epic-30s-quest-game
 Install the necessary dependencies:
 
-sh
+ ```sh
 Copy code
 pip install -r requirements.txt
 Run the game:
 
-sh
+ ```sh
 Copy code
 python game.py
 Usage
