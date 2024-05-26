@@ -50,44 +50,44 @@ python epic_30s.py
 ```
 4.Usage
 
-Adding Companions and Users
+*Adding Companions and Users*
 You can add companions and users to your party using the add_companion and add_user commands. These features help you build a supportive network as you navigate through various quests.
 
-Traveling
+*Traveling*
 Use the travel_map and fast_travel features to find new quests and people, and to travel faster to destinations. These features save time and enhance the gameplay experience.
 
-Quests
+*Quests*
 Quests are categorized into different questlines such as physical attributes, mental attributes, personal growth, friendships and relationships, and adventures. Each questline offers unique challenges and rewards.
 
-New in Patch v.30.0.0
+## New in Patch v.30.0.0
 
-Features
-Add_companion and add_user: Implemented to add new people to your party.
-Travel_map and fast_travel: Added to find new quests and people, and travel faster to destinations.
-Questline Updates
-Strength, Condition, Willpower and Composure:
+#Features
+*Add_companion and add_user:* Implemented to add new people to your party.
+*Travel_map and fast_travel:* Added to find new quests and people, and travel faster to destinations.
+#Questline Updates
+*Strength, Condition, Willpower and Composure:*
 
 Physical attributes: Achieve peak physical condition linked to mental attributes.
 Mental attributes: Enhance Willpower, Courage, and Composure.
-Personal Growth Expedition:
+*Personal Growth Expedition:*
 
 Continuous Learning: Stay curious and gain new skills.
 Work-Life Balance: Achieve harmony between leisure and professional activities.
 Goals and Dreams: Set and pursue life goals.
-Personal Friendships and Relationships Campaign:
+*Personal Friendships and Relationships Campaign:*
 
 Friendships and Family: Strengthen bonds with allies and relatives.
 Partnerships: Develop and nurture partnerships.
 Adventures:
 
-Adventure Mode: Unlock and embark on new journeys with companions.
+*Adventure Mode:* Unlock and embark on new journeys with companions.
 Items
 
-New Items and Powers
+*New Items and Powers*
 Necklace of the Seabond: Provides physical protection and strengthens the heart and mind.
 Glasses of the Emerald Gaze: Protects from harsh sunlight and enhances coolness.
 The Echoing Grip: Amplifies the user's voice for commanding presence and leadership.
-Quests
+*Quests*
 
 Engage in a variety of quests designed to improve physical and mental attributes, foster personal growth, and build strong relationships.
 
