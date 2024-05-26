@@ -1,4 +1,4 @@
-
+markdown
 # Epic 30s Quest Game
 
 Welcome to the Epic 30s Quest Game! This game is designed to guide players through personal growth, adventures, and building relationships, all while achieving various life goals and maintaining a balance between physical and mental attributes.
@@ -30,16 +30,24 @@ Epic 30s Quest Game is an immersive RPG that helps players navigate their 30s th
 To install the game, follow these steps:
 
 1. Clone the repository:
-´´sh
-   git clone https://github.com/julenuy/Level_up.git
+   ```sh
+   git clone https://github.com/yourusername/epic-30s-quest-game.git
 Navigate to the project directory:
-  cd Level_up
+
+sh
+Copy code
+cd epic-30s-quest-game
 Install the necessary dependencies:
-  please check your birth certificate if you really turned 30. 
+
+sh
 Copy code
 pip install -r requirements.txt
-Run the patch:
-python epic.py
+Run the game:
+
+sh
+Copy code
+python game.py
+Usage
 
 Adding Companions and Users
 You can add companions and users to your party using the add_companion and add_user commands. These features help you build a supportive network as you navigate through various quests.
@@ -88,8 +96,4 @@ Continuous Learning: Encourages staying curious and gaining new skills.
 Bug Fixes
 
 Improved companion detection and interaction.
-Removed missing interest to New Zealand, Ruhr Area, and Donkeys
-
-License
-
-This project is licensed under the NUY License. 
+Removed missing interest to New Zealand, Ruhr Area, and Donkeys.
