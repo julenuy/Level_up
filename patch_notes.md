@@ -4,11 +4,11 @@ Release date: 21.05.2024
 
 New quests and features: 
 	
-	Features: Add_companion and add_user were implemented to add new people to your party. Travel_map and fast_travel were added to find new quests and people and travel faster to destinations
-	Questline:
-		Strength, Condition, Willpower and Composure: 
-			Physical attributes: 	
-  				Embark on a journey to achieve peak physical condition which is inevitably connectes to mental attributes.
+#**Features:** Add_companion and add_user were implemented to add new people to your party. Travel_map and fast_travel were added to find new quests and people and travel faster to destinations
+##Questline:
+###Strength, Condition, Willpower and Composure: 
+####			Physical attributes: 	
+#####				Embark on a journey to achieve peak physical condition which is inevitably connectes to mental attributes.
                             	The Questline is connected to Hobbies and Adventures and Personal Companions and Partnerships encouraging 
                             	collaborative activities and shared experiences.
                              
