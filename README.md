@@ -1,5 +1,4 @@
-markdown
-Copy code
+
 # Epic 30s Quest Game
 
 Welcome to the Epic 30s Quest Game! This game is designed to guide players through personal growth, adventures, and building relationships, all while achieving various life goals and maintaining a balance between physical and mental attributes.
