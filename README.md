@@ -39,22 +39,21 @@ cd epic-30s-quest-game
 
  ```
 2.Install the necessary dependencies:
+The game requires python 3.9 or better and pip
+The easiest way is to use MobaXterm (https://mobaxterm.mobatek.net/download.html) to launch the game.
 
  ```sh
-pip install -r requirements.txt
+pip install pygame
 ```
 3.Run the patch:
 
  ```sh
-python epic_30s.py
+python epic.py
 ```
 4.Usage
 
-*Adding Companions and Users*
-You can add companions and users to your party using the add_companion and add_user commands. These features help you build a supportive network as you navigate through various quests.
-
-*Traveling*
-Use the travel_map and fast_travel features to find new quests and people, and to travel faster to destinations. These features save time and enhance the gameplay experience.
+Keyboard input will be noticed by the game only when the prompt sign is active: > 
+Switch on your speakers, music is part of the game.
 
 *Quests*
 Quests are categorized into different questlines such as physical attributes, mental attributes, personal growth, friendships and relationships, and adventures. Each questline offers unique challenges and rewards.
