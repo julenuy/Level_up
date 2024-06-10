@@ -35,7 +35,7 @@ To install the game, follow these steps:
 Navigate to the project directory:
 
  ```sh
-cd Level_up
+cd Level_up/Epic_thirties
 
  ```
 2.Install the necessary dependencies:
@@ -48,7 +48,7 @@ pip install pygame
 3.Run the patch:
 
  ```sh
-python epic.py
+python game.py
 ```
 4.Usage
 
