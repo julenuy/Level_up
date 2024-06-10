@@ -31,7 +31,7 @@ To install the game, follow these steps:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/Level_up.git
+   git clone https://github.com/julenuy/Level_up.git
 Navigate to the project directory:
 
  ```sh
