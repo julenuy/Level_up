@@ -31,11 +31,11 @@ To install the game, follow these steps:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/epic-30s-quest-game.git
+   git clone https://github.com/yourusername/Level_up.git
 Navigate to the project directory:
 
  ```sh
-cd epic-30s-quest-game
+cd Level_up
 
  ```
 2.Install the necessary dependencies:
