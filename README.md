@@ -1,6 +1,6 @@
 # Epic 30s Quest Game
 
-# <span style="color:blue">Please check the latest update and get the latest version of the game via:</span>
+# *<span style="color:blue">Please check the latest update and get the latest version of the game via:</span>*
 ```sh
 git pull https://github.com/julenuy/Level_up.git
 ```
