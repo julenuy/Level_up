@@ -175,7 +175,7 @@ class Game:
         pygame.mixer.init()
         play_music("ÓlafurArnalds.mp3")
         slow_print(
-            "******************************************* Jule Games presents ************************************",
+            "******************************************* Doc Nuy Studios presents ************************************",
             delay=0.07)
         display_ascii("Boje.txt")
         slow_print("Willkommen Abenteurer", delay=0.07)
@@ -232,10 +232,10 @@ class Game:
         self.results.append(wurf)
 
         if wurf >= zielwert:
-            slow_print("Deinen Anhänger")
+            slow_print("Erfolg! Deinen Anhänger")
             self.schoener_traum()
         else:
-            slow_print("Nichts")
+            slow_print("Misserfolg! Nichts")
             self.alptraum()
 
     def alptraum(self):
@@ -324,11 +324,11 @@ class Game:
         slow_print(f"Du würfelst eine {wurf}. Zielwert ist {zielwert}.")
         self.results.append(wurf)
         if wurf >= zielwert:
-            slow_print("Norbert gleitet an den anderen Fischen vorbei und stört die Sphäre nicht.")
+            slow_print("Erfolg! Norbert gleitet an den anderen Fischen vorbei und stört die Sphäre nicht.")
             slow_print("Der dichte Schwarm nimmt dir dadurch die Sicht auf alles was um dich herum geschieht.")
             self.muschel_auffangen()
         else:
-            slow_print("Der positiv verstrahlte Norbert zerstört die perfekte Sphäre.")
+            slow_print("Misserfolg! Der positiv verstrahlte Norbert zerstört die perfekte Sphäre.")
             self.muschel_auffangen()
 
     def muschel_auffangen(self):
@@ -344,14 +344,14 @@ class Game:
             self.muschel_verloren()
 
     def muschel_gefangen(self):
-        slow_print("Du fängst die Muschel auf.")
+        slow_print("Erfolg! Du fängst die Muschel auf.")
         slow_print("Du betrachtest das Gebilde genauer, eine typische Koh Tao Shell, wie du sie damals von Justus geschenkt bekommen hast.")
         slow_print("Und du erkennst, dass etwas eigenartig an ihr ist... es steht etwas auf ihr geschrieben ...")
         wurf, zielwert = self.roll_d20_mod("Intelligenz")
         slow_print(f"Du würfelst eine {wurf}. Zielwert ist {zielwert}.")
         self.results.append(wurf)
         if wurf >= zielwert:
-            slow_print("Du hältst die Muschel näher an deine Maske und der vergrößernde Effekt des Wassers hilft dir, die Schrift zu entziffern. "
+            slow_print("Erfolg! Du hältst die Muschel näher an deine Maske und der vergrößernde Effekt des Wassers hilft dir, die Schrift zu entziffern. "
                        "Die Antwort auf all deine Fragen ist... 42.... 42? Ist das ein Scherz? Du schaust zu Norbert, der dich bestärkend anzunicken scheint..."
                         "Definitiv ist das ein Scherz, denn dies ist ein Traum und du erwachst.")
             self.prompt_save_game()
@@ -360,13 +360,13 @@ class Game:
             self.chapter1()
         else:
             slow_print(
-                "Du verbringst gefühlt Stunden damit herauszufinden, was dort stehen könnte, aber du schaffst es nicht. Völlig frustriert stellst du fest, dass du träumst...  Und du wachst auf.")
+                "Misserfolg! Du verbringst gefühlt Stunden damit herauszufinden, was dort stehen könnte, aber du schaffst es nicht. Völlig frustriert stellst du fest, dass du träumst...  Und du wachst auf.")
             self.epilog_path = "traum_Muschel"
             fadeout_music(3000)
             self.prompt_save_game()
             self.chapter1()
     def muschel_verloren(self):
-        slow_print("Du fängst die Muschel nicht auf und schaust ihr zu, wie sie unter dir in die Tiefe sinkt... du versuchst nochmal nachzugreifen und ein Ruck durchfährt dich... Und du wachst auf.")
+        slow_print("Misserfolg! Du fängst die Muschel nicht auf und schaust ihr zu, wie sie unter dir in die Tiefe sinkt... du versuchst nochmal nachzugreifen und ein Ruck durchfährt dich... Und du wachst auf.")
         self.epilog_path = "traum_Muschel_verloren"
         self.prompt_save_game()
         fadeout_music(3000)
@@ -409,17 +409,17 @@ class Game:
         wurf, zielwert = self.roll_d20_mod("Intelligenz")
         slow_print(f"Du machst eine Intelligenz-Probe : {wurf}.")
         if wurf >= zielwert:
-            slow_print("Du legst deinen Kopf schief und während du dir noch darüber klar wirst, wo nun oben und unten ist, beobachtest du amüsiert, wie Jule plötzlich jubelnde Gesten macht und dir bedeutet herzuschwimmen.")
+            slow_print("Erfolg! Du legst deinen Kopf schief und während du dir noch darüber klar wirst, wo nun oben und unten ist, beobachtest du amüsiert, wie Jule plötzlich jubelnde Gesten macht und dir bedeutet herzuschwimmen.")
             self.walhai_event()
         else:
-            slow_print("Du legst deinen Kopf schief und während du dir noch darüber klar wirst, wo nun oben und unten ist, beobachtest du leicht genervt, wie Jule plötzlich jubelnde Gesten macht und dir bedeutet herzuschwimmen. Zeigt sie dir nun die 100. Felsformation, die Aussieht wie ein Gesicht?")
+            slow_print("Misserfolg! Du legst deinen Kopf schief und während du dir noch darüber klar wirst, wo nun oben und unten ist, beobachtest du leicht genervt, wie Jule plötzlich jubelnde Gesten macht und dir bedeutet herzuschwimmen. Zeigt sie dir nun die 100. Felsformation, die Aussieht wie ein Gesicht?")
             self.walhai_event()
 
     def walhai_event(self):
         wurf, zielwert = self.roll_d20_mod("Empathie")
         slow_print(f"Du machst eine Empathie-Probe : {wurf}.")
         if wurf >= zielwert:
-            slow_print("Du entscheidest dich zu ihr zu schwimmen"
+            slow_print("Erfolg! Du entscheidest dich zu ihr zu schwimmen"
                         "Jule freut sich sichtlich, dass du entschlossen hast, deine kleine Sphäre zu verlassen."
                         "Sie zeigt dir das Zeichen für Walhai und du musst loslachen, du denkst dass sie dich hochnehmen will. Wäre ja nicht das erste mal. Du tippst mit deinem Zeigefinger an deine Schläfe."
                         "Du kannst sogar durch die Maske Jules hochgezogene Augenbraue sehen, während sie den Kopf schüttelt und dann beginnt voranzuschwimmen. Du folgst ihr und tatsächlich erkennst du einen dunklen Schatten einige Meter entfernt von euch."
@@ -432,7 +432,7 @@ class Game:
             self.chapter1()
 
         else:
-            slow_print("Bleibst in deiner Sphäre")
+            slow_print("Misserfolg! Bleibst in deiner Sphäre")
             slow_print("Jule ist sichtlich nicht sehr begeistert darüber, dass du dich nicht von Ort und Stelle bewegst, entschließt sich aber, dich nicht allein zu lassen und schwimmt zu dir herüber.")
             slow_print("Als sie die Sphäre erreicht, kannst du ihre schmunzelnde Stimme in deinem Kopf hören: Du bist so ein Vollpfosten. "
                        "Du musst lachen und .... wachst auf.")
@@ -448,7 +448,7 @@ class Game:
         if wurf >= zielwert:
             self.navigieren()
         else:
-            slow_print("Navigation ist nicht so deine Stärke was? Nach einer Weile entschließt du dich langsam aufzutauchen und sobald du die Wasseroberfläche durchbrochen hast, "
+            slow_print("Misserfolg! Navigation ist nicht so deine Stärke was? Nach einer Weile entschließt du dich langsam aufzutauchen und sobald du die Wasseroberfläche durchbrochen hast, "
                        "wachst du auf.")
             self.epilog_path = "orientieren_fail"
             self.prompt_save_game()
@@ -456,7 +456,7 @@ class Game:
             self.chapter1()
 
     def navigieren(self):
-        slow_print("Du weißt zwar nicht wo du bist, aber deine Sinne beginnen sich zu schärfen und du beginnst zu lauschen. Und tatsächlich, du hörst ein charakteristisches Brummen von Tönen… .")
+        slow_print("Erfolg! Du weißt zwar nicht wo du bist, aber deine Sinne beginnen sich zu schärfen und du beginnst zu lauschen. Und tatsächlich, du hörst ein charakteristisches Brummen von Tönen… .")
         fade_music_to_volume(0.1, duration=3)
         play_sound("Morse.mp3", volume=2.0)
         choice = slow_input(
@@ -472,19 +472,19 @@ class Game:
             input_sequence = []
             direction_descriptions = {
                 "n": [
-                    f"Du schwimmst {distance} m nach Norden durch eine dichte Seegraswiese.",
-                    f"Du tauchst {distance} m in nördlicher Richtung zwischen hoch aufragenden Korallenbänken hindurch.",
-                    f"{distance} m nach Norden schwimmend, umfängst du eine Gruppe neugieriger Fische."
+                    f"Du schwimmst nach Norden durch eine dichte Seegraswiese.",
+                    f"Du tauchst in nördlicher Richtung zwischen hoch aufragenden Korallenbänken hindurch.",
+                    f"Nach Norden schwimmend, umfängst du eine Gruppe neugieriger Fische."
                 ],
                 "w": [
-                    f"Du schwimmst {distance} m nach Westen entlang eines Korallenriffs.",
-                    f"Im Westen durchquerst du nach {distance} m ein Feld farbenfroher Anemonen.",
-                    f"Nach Westen nach {distance} m gleitest du an einem versunkenen Schiffswrack vorbei."
+                    f"Du schwimmst nach Westen entlang eines Korallenriffs.",
+                    f"Im Westen durchquerst du ein Feld farbenfroher Anemonen.",
+                    f"Nach Westen gleitest du an einem versunkenen Schiffswrack vorbei."
                 ],
                 "o": [
-                    f"Du schwimmst {distance} m nach Osten durch eine klare, offene Wasserfläche.",
-                    f"Im Osten siehst du nach {distance} m eine geheimnisvolle Höhle in der Ferne.",
-                    f"Du tauchst {distance} m nach Osten und entdeckst einen alten, verrosteten Anker."
+                    f"Du schwimmst nach Osten durch eine klare, offene Wasserfläche.",
+                    f"Im Osten siehst du eine geheimnisvolle Höhle in der Ferne.",
+                    f"Du tauchst  nach Osten und entdeckst einen alten, verrosteten Anker."
                 ]
             }
 
@@ -524,9 +524,16 @@ class Game:
     def chapter1(self):
         play_music("theory.mp3")
         slow_print("Du erwachst in deinem Bett.")
-        slow_print("........................................................................................"
-                   "..............................Hier entsteht Chapter1...................................."
-                   "...................................Deine Reise.........................................")
+        slow_print("........................................................................................\n"
+                    "..............................Hier entsteht Chapter1....................................\n"
+                    "...................................Deine Reise..........................................\n"
+                    "........................................................................................\n"
+                    "Danke, fürs Zocken!\n"
+                    "Entwickler: Jule\n"
+                    "Skript: Auch Jule\n"
+                    "Design: Immer noch Jule\n"
+                    "Musik: :D \n"
+                    "Entwickelt für Boje und gewidmet seinem Eintritt in die epischen Dreiziger ;)")
 
         #display_ascii("")
         ####if self.epilog_path == "schoener_traum":
