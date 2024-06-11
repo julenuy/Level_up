@@ -1,6 +1,6 @@
 # Epic 30s Quest Game
 
-#   please check the latest update and get the latest version of the game via 
+# >>Please check the latest update and get the latest version of the game via:
 ```sh
 git pull https://github.com/julenuy/Level_up.git
 ```
