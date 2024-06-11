@@ -334,7 +334,7 @@ class Game:
     def muschel_auffangen(self):
         slow_print("Deine Aufmerksamkeit richtet sich völlig auf den kleinen Norbert.")
         slow_print("Der Fisch schwimmt verspielt, um deine weißen Flossen und hinauf zu deiner Maske und lässt dann vor deinen Augen von der Muschel ab.")
-        slow_print("Du greifst mit deiner Hand durch das angenehm kühle Wasser und versuchst nach der Muschel zu greifen.")
+        slow_print("Du streckst deine Hand durch das angenehm kühle Wasser und versuchst nach der Muschel zu greifen.")
         wurf, zielwert = self.roll_d20_mod("Geschicklickeit")
         slow_print(f"Du würfelst eine {wurf}. Zielwert ist {zielwert}.")
         self.results.append(wurf)
@@ -366,7 +366,7 @@ class Game:
             self.prompt_save_game()
             self.chapter1()
     def muschel_verloren(self):
-        slow_print("Misserfolg! Du fängst die Muschel nicht auf und schaust ihr zu, wie sie unter dir in die Tiefe sinkt... du versuchst nochmal nachzugreifen und ein Ruck durchfährt dich... Und du wachst auf.")
+        slow_print("Misserfolg! Du kannst die Muschel nicht fangen und sie sinkt in die Tiefe.... du versuchst erneut nachzugreifen, doch ein Ruck durchfährt dich... Und du wachst auf.")
         self.epilog_path = "traum_Muschel_verloren"
         self.prompt_save_game()
         fadeout_music(3000)
@@ -412,7 +412,7 @@ class Game:
             slow_print("Erfolg! Du legst deinen Kopf schief und während du dir noch darüber klar wirst, wo nun oben und unten ist, beobachtest du amüsiert, wie Jule plötzlich jubelnde Gesten macht und dir bedeutet herzuschwimmen.")
             self.walhai_event()
         else:
-            slow_print("Misserfolg! Du legst deinen Kopf schief und während du dir noch darüber klar wirst, wo nun oben und unten ist, beobachtest du leicht genervt, wie Jule plötzlich jubelnde Gesten macht und dir bedeutet herzuschwimmen. Zeigt sie dir nun die 100. Felsformation, die Aussieht wie ein Gesicht?")
+            slow_print("Misserfolg! Du legst deinen Kopf schief und während du dir noch darüber klar wirst, wo nun oben und unten ist, beobachtest du leicht genervt, wie Jule plötzlich jubelnde Gesten macht und dir bedeutet herzuschwimmen. Zeigt sie dir nun die 100. Felsformation, die wie ein Gesicht aussieht?")
             self.walhai_event()
 
     def walhai_event(self):
@@ -474,7 +474,7 @@ class Game:
                 "n": [
                     f"Du schwimmst nach Norden durch eine dichte Seegraswiese.",
                     f"Du tauchst in nördlicher Richtung zwischen hoch aufragenden Korallenbänken hindurch.",
-                    f"Nach Norden schwimmend, umfängst du eine Gruppe neugieriger Fische."
+                    f"Nach Norden schwimmend, findest du eine Gruppe neugieriger Fische."
                 ],
                 "w": [
                     f"Du schwimmst nach Westen entlang eines Korallenriffs.",
@@ -482,7 +482,7 @@ class Game:
                     f"Nach Westen gleitest du an einem versunkenen Schiffswrack vorbei."
                 ],
                 "o": [
-                    f"Du schwimmst nach Osten durch eine klare, offene Wasserfläche.",
+                    f"Du schwimmst nach Osten durch klares, Blauwasser.",
                     f"Im Osten siehst du eine geheimnisvolle Höhle in der Ferne.",
                     f"Du tauchst  nach Osten und entdeckst einen alten, verrosteten Anker."
                 ]
@@ -513,7 +513,7 @@ class Game:
     def looten(self):
         slow_print("Du schaust nochmal auf deine Tauchuhr, siehst deinen Schwimmverlauf und fühlst dich ein wenig verarscht, aber dass du eine Schatzkiste gefunden hast, macht den kurz aufkommenden Ärger wieder wett.")
         slow_print("Beinahe zu deiner Enttäuschung siehst du dass die Schatzkiste nicht mit einem Schloss verschlossen ist und öffnest sie. Du findest in der Schatzkiste eine grüne Brille, ein Tagebuch und einen Griff.")
-        slow_print("Deinem Inventar wurde >> Der widerhallende Griff << >>Die Brille des smaragdgrünen Blicks<< und das  >>Buch der Mythen<< hinzugefügt")
+        slow_print("Dein Inventar wurde um >> Der widerhallende Griff << >>Die Brille des smaragdgrünen Blicks<< und das  >>Buch der Mythen<< erweitert")
         slow_print("Alles kommt dir bekannt vor, was machen diese Gegenstände in der Kiste? Du nimmst dir das Buch und als du hindurch blätterst scheint alles so wie immer, aber eine Seite ganz am Ende zeigt dir etwas neues: Du schaust hin und liest: Wach auf!")
         slow_print("Und du wachst auf.")
         self.epilog_path = "Orientieren_success"
@@ -533,7 +533,7 @@ class Game:
                     "Skript: Auch Jule\n"
                     "Design: Immer noch Jule\n"
                     "Musik: :D \n"
-                    "Entwickelt für Boje und gewidmet seinem Eintritt in die epischen Dreiziger ;)")
+                    "Entwickelt für Boje und gewidmet seinem Eintritt in die epischen Dreißiger ;)")
 
         #display_ascii("")
         ####if self.epilog_path == "schoener_traum":
