@@ -1,6 +1,8 @@
 markdown
 # Epic 30s Quest Game
 
+#please check the latest update and get the latest version of the game via git pull https://github.com/julenuy/Level_up.git
+
 Welcome to the Epic 30s Quest Game! This game is designed to guide players through personal growth, adventures, and building relationships, all while achieving various life goals and maintaining a balance between physical and mental attributes.
 
 ## Table of Contents
