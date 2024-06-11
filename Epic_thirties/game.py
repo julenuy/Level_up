@@ -25,16 +25,16 @@ def fade_music_to_volume(target_volume, duration):
         time.sleep(1)
 
 
-def play_sound(file, volume=1.0):
-    sound = pygame.mixer.Sound(file)
-    sound.set_volume(volume)
-    sound.play()
+def play_sound(file, volume=2.0, loop=-1):
+    pygame.mixer.music.load(file)
+    pygame.mixer.music.play(loop)
+    music.set_volume(volume)
 
 def fadeout_music(time_ms):
     pygame.mixer.music.fadeout(time_ms)
 
 def fadeout_sound(time_ms):
-    pygame.mixer.Sound.fadeout(time_ms)
+    pygame.mixer.music.fadeout(time_ms)
 
 def slow_print(text, delay=0.07):
     lines = text.split('\t')
@@ -235,8 +235,8 @@ class Game:
             slow_print("Deinen Anhänger")
             self.schoener_traum()
         else:
-            self.alptraum()
             slow_print("Nichts")
+            self.alptraum()
 
     def alptraum(self):
         slow_print("Ein Schreck durchzuckt dich, als du deinen Anhänger nicht mehr fühlst. Wo ist er hin?")
@@ -251,10 +251,10 @@ class Game:
         slow_print(
             "Ein Gefühl der Beklemmung überkommt dich. Dann, ohne Vorwarnung, wirst du heftig von etwas getroffen, als ob eine Salve von Paintballkugeln dich trifft.")
         slow_print(
-            "Ein brennender Schmerz durchzuckt deinen Körper, als du realisierst, dass kleine Fusilien durchs Wasser schießen und dich rammen.")
+            "Ein brennender Schmerz durchzuckt deinen Körper, als du realisierst, dass kleine Füsiliere durchs Wasser schießen und dich rammen.")
         slow_print(
             "Inmitten des Chaos wird dir klar: Sie fliehen vor etwas. Etwas Größerem, das jetzt auf dich zukommt...")
-        choice = slow_input("Du musst schnell handeln. Was machst du? \n1: Es ist dir egal, du willst deinen Anhänger zurück und tauchst tiefer \n2: Du solltest den Fischen hinterherschwimmen und ebenfalls fliehen: ")
+        choice = slow_input("Du musst schnell handeln. Was machst du? \n1: Es ist dir egal, du willst deinen Anhänger zurück und tauchst tiefer \n2: Du solltest den Fischen hinterherschwimmen und ebenfalls fliehen ")
         if choice == "1":
             fadeout_music(2000)
             play_music("Wild.mp3")
@@ -263,6 +263,7 @@ class Game:
             slow_print("Du schreckst auf!")
             self.epilog_path = "alptraum_tiefenrausch"
             self.prompt_save_game()
+            self.chapter1()
         elif choice == "2":
             slow_print("Du folgst dem Schwarm mit kräftigen Flossenschlägen. Auch wenn du an die Geschwindigkeit des Fischschwarms nicht annähernd herankommst findest du den Zielort der Fische.")
             slow_print("Eine Felswand, in der es eine Höhle gibt")
@@ -276,20 +277,20 @@ class Game:
             slow_print(
                 "Du schaust dich um und hast keine Ahnung mehr wo du dich befindest. Doch dann scheint es, als würdest du die Wasseroberfläche über dir sehen. Hoffnung keimt in dir auf, und du schwimmst verzweifelt in diese Richtung.")
             fadeout_music(5000)
+            play_music("Wild.mp3")
             slow_print(
                 "Doch als du näher kommst, siehst du, dass es nur eine Blasenreflektion an der Höhlendecke ist, eine typische Illusion in solchen Tiefen.")
-            play_music("Wild.mp3")
             slow_print(
                 "Die Erkenntnis trifft dich hart, du wirst hier ertrinken... Auch wenn du weiter nach einem Ausweg suchst... irgendwann entweicht dein letzter Atemzug deinen Lungen, und alles um dich herum wird schwarz.")
             slow_print(
                 "......................................................................Du schreckst hoch")
             self.epilog_path = "alptraum_höhle"
             self.prompt_save_game()
+            self.chapter1()
 
         else:
             slow_print("Ungültige Wahl.")
             self.alptraum()
-            self.chapter1()
 
     def schoener_traum(self):
         slow_print(
@@ -444,8 +445,8 @@ class Game:
 
     def navigieren(self):
         slow_print("Du weißt zwar nicht wo du bist, aber deine Sinne beginnen sich zu schärfen und du beginnst zu lauschen. Und tatsächlich, du hörst ein charakteristisches Brummen von Tönen… .")
-        fade_music_to_volume(0.3, duration=3)
-        play_sound("Morse.mp3", volume=1.0)
+        fade_music_to_volume(0.1, duration=3)
+        play_sound("Morse.mp3", volume=2.0)
         choice = slow_input(
             "Weißt du was die Nachricht bedeutet? \n1: Na klar, bin ja nicht von gestern. \n2: Nein, ich brauche einen Telefonjoker. ").lower()
         if choice == "1":
@@ -507,7 +508,7 @@ class Game:
         self.chapter1()
 
     def chapter1(self):
-        play_music("/Users/julianuy/Desktop/theory.mp3")
+        play_music("theory.mp3")
         display_ascii("")
         ####if self.epilog_path == "schoener_traum":
         ###    slow_print("Nach deinem erholsamen Traum wachst du mit einem Gefühl der Zufriedenheit auf.")
