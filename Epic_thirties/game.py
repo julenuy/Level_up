@@ -533,9 +533,8 @@ class Game:
                     "Skript: Auch Jule\n"
                     "Design: Immer noch Jule\n"
                     "Musik: :D \n"
-                    "Entwickelt für Boje und gewidmet seinem Eintritt in die epischen Dreißiger ;)")
-
-        #display_ascii("")
+                    "Entwickelt für Boje und seinem Eintritt in die epischen Dreißiger gewidment ;)")
+        display_ascii("Abspann.txt")
         ####if self.epilog_path == "schoener_traum":
         ###    slow_print("Nach deinem erholsamen Traum wachst du mit einem Gefühl der Zufriedenheit auf.")
         ###elif self.epilog_path == "alptraum":
