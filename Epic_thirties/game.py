@@ -28,7 +28,7 @@ def fade_music_to_volume(target_volume, duration):
 def play_sound(file, volume=2.0, loop=-1):
     pygame.mixer.music.load(file)
     pygame.mixer.music.play(loop)
-    music.set_volume(volume)
+    pygame.mixer.music.set_volume(volume)
 
 def fadeout_music(time_ms):
     pygame.mixer.music.fadeout(time_ms)
@@ -262,6 +262,7 @@ class Game:
                        "Ist das der Tiefenrausch von dem immer gesprochen wurde? Plötzlich wird alles schwarz.")
             slow_print("Du schreckst auf!")
             self.epilog_path = "alptraum_tiefenrausch"
+            fadeout_music(3000)
             self.prompt_save_game()
             self.chapter1()
         elif choice == "2":
@@ -285,6 +286,7 @@ class Game:
             slow_print(
                 "......................................................................Du schreckst hoch")
             self.epilog_path = "alptraum_höhle"
+            fadeout_music(3000)
             self.prompt_save_game()
             self.chapter1()
 
@@ -301,18 +303,20 @@ class Game:
         slow_print(
             "Der Schwarm blitzt in Blau und Gelb von den glänzenden Schuppen und schwimmt auf dich zu. Ganz ruhig umkreisen sie dich und bilden bald eine schützende Kugel um dich.")
         slow_print("Egal in welche Richtung du blickst, überall sind diese kleinen Fische zu sehen.")
-        choice = slow_input(
-            "Was tust du? \n1: Natürlich nach deinem Fisch suchen \n2: Natürlich nach deinem Divebuddy sehen \n3: Du versuchst dich zu orientieren: ").lower()
-        if choice == "1":
-            self.papageifisch_entdecken()
-        elif choice == "2":
-            self.divebuddy_entdecken()
-        elif choice == "3":
-            self.dich_orientieren()
-        else:
-            slow_print("Ungültige Wahl.")
-            self.schoener_traum()
-
+        while True:
+            choice = slow_input(
+                "Was tust du? \n1: Natürlich nach deinem Fisch suchen \n2: Natürlich nach deinem Divebuddy sehen \n3: Du versuchst dich zu orientieren: ").lower()
+            if choice == "1":
+                self.papageifisch_entdecken()
+                break
+            elif choice == "2":
+                self.divebuddy_entdecken()
+                break
+            elif choice == "3":
+                self.dich_orientieren()
+                break
+            else:
+                slow_print("Ungültige Wahl.")
 
     def papageifisch_entdecken(self):
         slow_print("Dein Papageifisch den du liebevoll Norbert getauft hast, begleitet dich häufig auf deinen Tauchgängen und auch jetzt schwimmt er stoisch auf dich zu mit einer Muschel im Schnabel.")
@@ -351,18 +355,21 @@ class Game:
                        "Die Antwort auf all deine Fragen ist... 42.... 42? Ist das ein Scherz? Du schaust zu Norbert, der dich bestärkend anzunicken scheint..."
                         "Definitiv ist das ein Scherz, denn dies ist ein Traum und du erwachst.")
             self.prompt_save_game()
+            fadeout_music(3000)
             self.epilog_path = "traum_papagei_muschel_42"
             self.chapter1()
         else:
             slow_print(
                 "Du verbringst gefühlt Stunden damit herauszufinden, was dort stehen könnte, aber du schaffst es nicht. Völlig frustriert stellst du fest, dass du träumst...  Und du wachst auf.")
             self.epilog_path = "traum_Muschel"
+            fadeout_music(3000)
             self.prompt_save_game()
             self.chapter1()
     def muschel_verloren(self):
         slow_print("Du fängst die Muschel nicht auf und schaust ihr zu, wie sie unter dir in die Tiefe sinkt... du versuchst nochmal nachzugreifen und ein Ruck durchfährt dich... Und du wachst auf.")
         self.epilog_path = "traum_Muschel_verloren"
         self.prompt_save_game()
+        fadeout_music(3000)
         self.chapter1()
     def divebuddy_entdecken(self):
         buddy_name = slow_input("Bitte gib den Namen deines Divebuddys ein: ")
@@ -385,6 +392,7 @@ class Game:
                     "Du bleibst in der Sphäre, drehst dich um deine eigene Achse, immer immer wieder, bis der Schwarm schnell um dich zu kreisen scheint, immer schneller..."
                     "und du erwachst.")
                 self.epilog_path = "Buddy_Sphäre"
+                fadeout_music(3000)
                 self.prompt_save_game()
                 self.chapter1()
             slow_print(
@@ -392,6 +400,7 @@ class Game:
             slow_print("Er/sie zeigt dir das Video auf der Kamera und ein Lächeln breitet sich auf deinem Gesicht aus.")
             slow_print("Mit dem Bild des schimmernden Schwarms noch vor Augen... erwachst du.")
             self.epilog_path = "Buddy_Video"
+            fadeout_music(3000)
             self.prompt_save_game()
             self.chapter1()
     def special_event(self):
@@ -418,6 +427,7 @@ class Game:
                         "Dann reißt dich ein Schwall Blasen aus deiner Trance und eigenartigerweise hörst du Jules schmunzelnde Stimme: Schade dass es nur ein Traum ist oder?"
                         "Du schaust dich irritiert zu ihr um und .... erwachst.")
             self.epilog_path = "Special_Walhai"
+            fadeout_music(3000)
             self.prompt_save_game()
             self.chapter1()
 
@@ -428,6 +438,7 @@ class Game:
                        "Du musst lachen und .... wachst auf.")
             self.epilog_path = "Special_Vollpfosten"
             self.prompt_save_game()
+            fadeout_music(3000)
             self.chapter1()
 
     def dich_orientieren(self):
@@ -438,9 +449,10 @@ class Game:
             self.navigieren()
         else:
             slow_print("Navigation ist nicht so deine Stärke was? Nach einer Weile entschließt du dich langsam aufzutauchen und sobald du die Wasseroberfläche durchbrochen hast, "
-                       "wachst auf.")
+                       "wachst du auf.")
             self.epilog_path = "orientieren_fail"
             self.prompt_save_game()
+            fadeout_music(3000)
             self.chapter1()
 
     def navigieren(self):
@@ -452,6 +464,7 @@ class Game:
         if choice == "1":
             fadeout_sound(3000)
             fade_music_to_volume(1, duration=3)
+            play_music("ÓlafurArnalds.mp3")
             correct_sequence = [
                 ("n", 20), ("w", 25), ("n", 20), ("o", 24),
                 ("n", 100), ("w", 50), ("n", 20), ("o", 5)
@@ -459,25 +472,25 @@ class Game:
             input_sequence = []
             direction_descriptions = {
                 "n": [
-                    "Du schwimmst {distance} m nach Norden durch eine dichte Seegraswiese.",
-                    "Du tauchst {distance} m in nördlicher Richtung zwischen hoch aufragenden Korallenbänken hindurch.",
-                    "{distance} m nach Norden schwimmend, umfängst du eine Gruppe neugieriger Fische."
+                    f"Du schwimmst {distance} m nach Norden durch eine dichte Seegraswiese.",
+                    f"Du tauchst {distance} m in nördlicher Richtung zwischen hoch aufragenden Korallenbänken hindurch.",
+                    f"{distance} m nach Norden schwimmend, umfängst du eine Gruppe neugieriger Fische."
                 ],
                 "w": [
-                    "Du schwimmst {distance} m nach Westen entlang eines Korallenriffs.",
-                    "Im Westen durchquerst du nach {distance} m ein Feld farbenfroher Anemonen.",
-                    "Nach Westen nach {distance} m gleitest du an einem versunkenen Schiffswrack vorbei."
+                    f"Du schwimmst {distance} m nach Westen entlang eines Korallenriffs.",
+                    f"Im Westen durchquerst du nach {distance} m ein Feld farbenfroher Anemonen.",
+                    f"Nach Westen nach {distance} m gleitest du an einem versunkenen Schiffswrack vorbei."
                 ],
                 "o": [
-                    "Du schwimmst {distance} m nach Osten durch eine klare, offene Wasserfläche.",
-                    "Im Osten siehst du nach {distance} m eine geheimnisvolle Höhle in der Ferne.",
-                    "Du tauchst {distance} m nach Osten und entdeckst einen alten, verrosteten Anker."
+                    f"Du schwimmst {distance} m nach Osten durch eine klare, offene Wasserfläche.",
+                    f"Im Osten siehst du nach {distance} m eine geheimnisvolle Höhle in der Ferne.",
+                    f"Du tauchst {distance} m nach Osten und entdeckst einen alten, verrosteten Anker."
                 ]
             }
 
             for direction, distance in correct_sequence:
-                dir_input = slow_input(f"In welche Richtung geht es? ({direction}) ").strip().lower()
-                dist_input = slow_input(f"Wie viele Meter? ({distance}) ").strip()
+                dir_input = slow_input(f"In welche Richtung geht es? ").strip().lower()
+                dist_input = slow_input(f"Wie viele Meter?").strip()
                 try:
                     dist_input = int(dist_input)
                 except ValueError:
@@ -505,11 +518,17 @@ class Game:
         slow_print("Und du wachst auf.")
         self.epilog_path = "Orientieren_success"
         self.prompt_save_game()
+        fadeout_music(3000)
         self.chapter1()
 
     def chapter1(self):
         play_music("theory.mp3")
-        display_ascii("")
+        slow_print("Du erwachst in deinem Bett.")
+        slow_print("........................................................................................"
+                   "..............................Hier entsteht Chapter1...................................."
+                   "...................................Deine Reise.........................................")
+
+        #display_ascii("")
         ####if self.epilog_path == "schoener_traum":
         ###    slow_print("Nach deinem erholsamen Traum wachst du mit einem Gefühl der Zufriedenheit auf.")
         ###elif self.epilog_path == "alptraum":
