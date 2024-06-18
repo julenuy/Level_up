@@ -4,13 +4,47 @@ import sys
 import json
 import os
 import pygame
+import threading
+
+enter_pressed = False
+def check_enter():
+    global enter_pressed
+    input()
+    enter_pressed = True
 
 def slow(text, delay=0.1):
+    global enter_pressed
     for char in text:
+        if enter_pressed:
+            sys.stdout.write(text[text.index(char):])  # Print the remaining text immediately
+            sys.stdout.flush()
+            break
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(delay)
     print()
+
+def slow_print(text, delay=0.07):
+    global enter_pressed
+    enter_pressed = False
+
+    enter_thread = threading.Thread(target=check_enter)
+    enter_thread.start()
+
+    lines = text.split('\t')
+    for line in lines:
+        if enter_pressed:
+            print(line)
+            break
+        slow(line, delay)
+        if enter_pressed:
+            break
+    enter_thread.join()
+
+def slow_input(prompt, delay=0.07):
+    slow_print(prompt, delay)
+    return input("> ")
+
 
 def play_music(file, loop=-1):
     pygame.mixer.music.load(file)
@@ -36,20 +70,12 @@ def fadeout_music(time_ms):
 def fadeout_sound(time_ms):
     pygame.mixer.music.fadeout(time_ms)
 
-def slow_print(text, delay=0.07):
-    lines = text.split('\t')
-    for line in lines:
-        slow(line, delay)
-        sys.stdout.flush()
-        input()
-def slow_input(prompt, delay=0.07):
-    slow_print(prompt, delay)
-    return input("> ")
 def slow_ascii(text, delay=0.001):
     lines = text.split('\n')
     for line in lines:
         slow(line, delay)
         sys.stdout.flush()
+
 def display_ascii(file_path):
     try:
         with open(file_path, 'r') as file:
