@@ -31,11 +31,20 @@ Epic 30s Quest Game is an immersive RPG that helps players navigate their 30s th
 - Unlock adventure mode for new and exciting journeys.
 
 ## Installation
+Please make sure to install for Windows OS Windows PowerShell7:
+
+   ```sh
+   winget install --id Microsoft.Powershell --source winget
+
+   ```
+and open an new Terminal!!!
+
 To install the game, follow these steps:
 
 1. Clone the repository:
    ```sh
    git clone https://github.com/julenuy/Level_up.git
+
 Navigate to the project directory:
 
  ```sh
@@ -44,12 +53,12 @@ cd Level_up/Epic_thirties
  ```
 2.Install the necessary dependencies:
 The game requires python 3.9 or better and pip
-The easiest way is to use MobaXterm (https://mobaxterm.mobatek.net/download.html) to launch the game.
+The easiest way is to use MobaXterm (https://mobaxterm.mobatek.net/download.html) or PowerShell to launch the game for Windows OS.
 
  ```sh
 pip install pygame
 ```
-3.Run the patch:
+3.Run the game:
 
  ```sh
 python game.py
