@@ -64,7 +64,6 @@ The easiest way is to use MobaXterm (https://mobaxterm.mobatek.net/download.html
 
  ```sh
 pip install pygame
-pip install threading
 ```
 3.Run the game:
 
