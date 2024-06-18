@@ -39,6 +39,13 @@ Please make sure to install for Windows OS Windows PowerShell7:
    ```
 and open an new Terminal!!!
 
+Afterwards install git via: 
+
+   ```sh
+   winget install --id Git.git -e --source winget
+
+   ```
+
 To install the game, follow these steps:
 
 1. Clone the repository:
